@@ -1,0 +1,15 @@
+.metadata
+.settings
+.classpath
+.project
+bin
+build
+reports/
+generated/
+.gradle
+*.iml
+*.ipr
+*.iws
+atlassian-ide-plugin.xml
+.idea/
+.DS_Store
