@@ -1,5 +1,32 @@
 package com.liferay.social.driver.web.portlet.action;
 
+import com.liferay.blogs.kernel.service.BlogsEntryLocalService;
+import com.liferay.message.boards.kernel.service.MBCategoryLocalService;
+import com.liferay.message.boards.kernel.service.MBDiscussionLocalService;
+import com.liferay.message.boards.kernel.service.MBMessageLocalService;
+import com.liferay.message.boards.kernel.service.MBThreadLocalService;
+import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.exception.SystemException;
+import com.liferay.portal.kernel.portlet.bridges.mvc.MVCResourceCommand;
+import com.liferay.portal.kernel.service.AddressLocalService;
+import com.liferay.portal.kernel.service.CountryService;
+import com.liferay.portal.kernel.service.GroupLocalService;
+import com.liferay.portal.kernel.service.LayoutLocalService;
+import com.liferay.portal.kernel.service.RegionService;
+import com.liferay.portal.kernel.service.ResourceLocalService;
+import com.liferay.portal.kernel.service.RoleLocalService;
+import com.liferay.portal.kernel.service.UserLocalService;
+import com.liferay.portal.kernel.util.ParamUtil;
+import com.liferay.portal.kernel.util.PortalUtil;
+import com.liferay.ratings.kernel.service.RatingsEntryService;
+import com.liferay.social.driver.web.constants.SocialDriverPortletKeys;
+import com.liferay.social.driver.web.content.ContentGenerator;
+import com.liferay.social.driver.web.thread.CreateContent;
+import com.liferay.social.driver.web.thread.GenerateStats;
+import com.liferay.social.kernel.service.SocialRequestLocalService;
+import com.liferay.wiki.service.WikiNodeLocalService;
+import com.liferay.wiki.service.WikiPageLocalService;
+
 import javax.portlet.ResourceRequest;
 import javax.portlet.ResourceResponse;
 import javax.servlet.http.HttpServletRequest;
@@ -7,33 +34,6 @@ import javax.servlet.http.HttpServletRequest;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
-
-import com.liferay.portal.kernel.exception.PortalException;
-import com.liferay.portal.kernel.exception.SystemException;
-import com.liferay.portal.kernel.portlet.bridges.mvc.MVCResourceCommand;
-import com.liferay.portal.kernel.util.ParamUtil;
-import com.liferay.portal.service.AddressLocalService;
-import com.liferay.portal.service.CountryService;
-import com.liferay.portal.service.GroupLocalService;
-import com.liferay.portal.service.LayoutLocalService;
-import com.liferay.portal.service.RegionService;
-import com.liferay.portal.service.ResourceLocalService;
-import com.liferay.portal.service.RoleLocalService;
-import com.liferay.portal.service.UserLocalService;
-import com.liferay.portal.util.PortalUtil;
-import com.liferay.portlet.blogs.service.BlogsEntryLocalService;
-import com.liferay.portlet.messageboards.service.MBCategoryLocalService;
-import com.liferay.portlet.messageboards.service.MBDiscussionLocalService;
-import com.liferay.portlet.messageboards.service.MBMessageLocalService;
-import com.liferay.portlet.messageboards.service.MBThreadLocalService;
-import com.liferay.portlet.ratings.service.RatingsEntryService;
-import com.liferay.portlet.social.service.SocialRequestLocalService;
-import com.liferay.social.driver.web.constants.SocialDriverPortletKeys;
-import com.liferay.social.driver.web.content.ContentGenerator;
-import com.liferay.social.driver.web.thread.CreateContent;
-import com.liferay.social.driver.web.thread.GenerateStats;
-import com.liferay.wiki.service.WikiNodeLocalService;
-import com.liferay.wiki.service.WikiPageLocalService;
 
 @Component(
 	immediate = true,

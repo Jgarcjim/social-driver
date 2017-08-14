@@ -1,6 +1,15 @@
 
 package com.liferay.social.driver.web.content;
 
+import com.liferay.portal.kernel.json.JSONArray;
+import com.liferay.portal.kernel.json.JSONException;
+import com.liferay.portal.kernel.json.JSONFactoryUtil;
+import com.liferay.portal.kernel.json.JSONObject;
+import com.liferay.portal.kernel.util.ArrayUtil;
+import com.liferay.portal.kernel.util.HtmlUtil;
+import com.liferay.portal.kernel.util.StringUtil;
+import com.liferay.social.driver.web.constants.SocialDriverConstants;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,15 +20,6 @@ import java.util.Set;
 
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.methods.GetMethod;
-
-import com.liferay.portal.kernel.json.JSONArray;
-import com.liferay.portal.kernel.json.JSONException;
-import com.liferay.portal.kernel.json.JSONFactoryUtil;
-import com.liferay.portal.kernel.json.JSONObject;
-import com.liferay.portal.kernel.util.ArrayUtil;
-import com.liferay.portal.kernel.util.HtmlUtil;
-import com.liferay.portal.kernel.util.StringUtil;
-import com.liferay.social.driver.web.constants.SocialDriverConstants;
 
 public class ContentGenerator {
 

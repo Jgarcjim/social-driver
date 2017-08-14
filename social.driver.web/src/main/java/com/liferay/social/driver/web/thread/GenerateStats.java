@@ -1,18 +1,18 @@
 
 package com.liferay.social.driver.web.thread;
 
+import com.liferay.blogs.kernel.model.BlogsEntry;
+import com.liferay.blogs.kernel.service.BlogsEntryLocalServiceUtil;
 import com.liferay.portal.kernel.dao.orm.QueryUtil;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
-import com.liferay.portal.model.User;
-import com.liferay.portal.service.UserLocalServiceUtil;
-import com.liferay.portal.util.PortalUtil;
-import com.liferay.portlet.blogs.model.BlogsEntry;
-import com.liferay.portlet.blogs.service.BlogsEntryLocalServiceUtil;
-import com.liferay.portlet.social.model.SocialActivityCounter;
-import com.liferay.portlet.social.model.SocialActivityCounterConstants;
-import com.liferay.portlet.social.service.SocialActivityCounterLocalServiceUtil;
-import com.liferay.portlet.social.util.SocialCounterPeriodUtil;
+import com.liferay.portal.kernel.model.User;
+import com.liferay.portal.kernel.service.UserLocalServiceUtil;
+import com.liferay.portal.kernel.util.PortalUtil;
+import com.liferay.social.kernel.model.SocialActivityCounter;
+import com.liferay.social.kernel.model.SocialActivityCounterConstants;
+import com.liferay.social.kernel.service.SocialActivityCounterLocalServiceUtil;
+import com.liferay.social.kernel.util.SocialCounterPeriodUtil;
 import com.liferay.wiki.model.WikiPage;
 import com.liferay.wiki.service.WikiPageLocalServiceUtil;
 
