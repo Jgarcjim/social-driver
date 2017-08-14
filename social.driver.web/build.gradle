@@ -29,6 +29,8 @@ repositories {
 }
 
 dependencies {
+	compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel", version: "2.0.0"
+	compileOnly group: "com.liferay.portal", name: "com.liferay.util.taglib", version: "2.0.0"
     compile 'org.osgi:org.osgi.core:6.0.0'
     compile 'commons-httpclient:commons-httpclient:3.1'
     compile 'com.liferay:com.liferay.wiki.api:1.0.0'
@@ -43,7 +45,6 @@ dependencies {
     compile 'biz.aQute.bnd:biz.aQute.bnd.annotation:2.4.0'
     compile 'javax.portlet:portlet-api:2.0'
     compile 'javax.servlet:servlet-api:2.5'
-    compile 'com.liferay.portal:com.liferay.portal.kernel:1.0.0'
     compile 'com.liferay:com.liferay.dynamic.data.mapping.api:1.0.0'
     compile 'org.slf4j:slf4j-api:1.7.7'
     compile 'org.slf4j:slf4j-simple:1.7.7'
