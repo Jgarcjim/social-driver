@@ -5,14 +5,14 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+import com.liferay.asset.kernel.exception.DuplicateTagException;
+import com.liferay.message.boards.kernel.model.MBCategory;
+import com.liferay.message.boards.kernel.model.MBCategoryConstants;
+import com.liferay.message.boards.kernel.model.MBMessage;
+import com.liferay.portal.kernel.service.ServiceContext;
 import com.liferay.portal.kernel.util.ObjectValuePair;
 import com.liferay.portal.kernel.util.StringUtil;
 import com.liferay.portal.kernel.workflow.WorkflowConstants;
-import com.liferay.portal.service.ServiceContext;
-import com.liferay.portlet.asset.DuplicateTagException;
-import com.liferay.portlet.messageboards.model.MBCategory;
-import com.liferay.portlet.messageboards.model.MBCategoryConstants;
-import com.liferay.portlet.messageboards.model.MBMessage;
 import com.liferay.social.driver.web.portlet.action.SocialDriverResourceCommand;
 
 public class MBManager {

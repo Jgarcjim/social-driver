@@ -8,7 +8,7 @@ buildscript {
         }
 		mavenCentral()
 		maven {
-			url 'https://repository.liferay.com/nexus/content/repositories/liferay-snapshots-ce/'
+			url ' https://repo1.maven.org/maven2/com/liferay/'
 		}
     }
     dependencies {
@@ -24,29 +24,27 @@ version='1.0'
 repositories {
     mavenCentral()
     maven {
-        url 'https://repository.liferay.com/nexus/content/repositories/liferay-snapshots-ce/'
+        url ' https://repo1.maven.org/maven2/com/liferay/'
     }
 }
 
 dependencies {
     compile 'org.osgi:org.osgi.core:6.0.0'
     compile 'commons-httpclient:commons-httpclient:3.1'
-    compile 'com.liferay:com.liferay.wiki.api:1.0.0-SNAPSHOT'
-    compile 'com.liferay:com.liferay.wiki.web:1.0.0-SNAPSHOT'
-    compile 'com.liferay:com.liferay.journal.api:1.0.0-SNAPSHOT'
-    compile 'com.liferay:com.liferay.journal.service:1.0.0-SNAPSHOT'
-    compile 'com.liferay:com.liferay.journal.content.web:1.0.0-SNAPSHOT'
-    compile 'com.liferay:com.liferay.blogs.recent.bloggers.web:1.0.0-SNAPSHOT'
-    compile 'com.liferay:com.liferay.social.activities.web:1.0.0-SNAPSHOT'
-    compile 'com.liferay:com.liferay.dynamic.data.mapping.api:1.0.0-SNAPSHOT'
+    compile 'com.liferay:com.liferay.wiki.api:1.0.0'
+    compile 'com.liferay:com.liferay.wiki.web:1.0.0'
+    compile 'com.liferay:com.liferay.journal.api:1.0.0'
+    compile 'com.liferay:com.liferay.journal.service:1.0.0'
+    compile 'com.liferay:com.liferay.journal.content.web:1.0.0'
+    compile 'com.liferay:com.liferay.blogs.recent.bloggers.web:1.0.0'
+    compile 'com.liferay:com.liferay.social.activities.web:1.0.0'
+    compile 'com.liferay:com.liferay.dynamic.data.mapping.api:1.0.0'
     compile 'org.osgi:org.osgi.compendium:5.0.0'
     compile 'biz.aQute.bnd:biz.aQute.bnd.annotation:2.4.0'
     compile 'javax.portlet:portlet-api:2.0'
     compile 'javax.servlet:servlet-api:2.5'
-    compile 'com.liferay.portal:portal-service:7.0.0-SNAPSHOT'
-    compile 'com.liferay.portal:util-bridges:7.0.0-SNAPSHOT'
-    compile 'com.liferay.portal:util-taglib:7.0.0-SNAPSHOT'
-    compile 'com.liferay.portal:util-java:7.0.0-SNAPSHOT'
+    compile 'com.liferay.portal:com.liferay.portal.kernel:1.0.0'
+    compile 'com.liferay:com.liferay.dynamic.data.mapping.api:1.0.0'
     compile 'org.slf4j:slf4j-api:1.7.7'
     compile 'org.slf4j:slf4j-simple:1.7.7'
 }

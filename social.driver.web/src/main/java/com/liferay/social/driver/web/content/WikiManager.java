@@ -1,22 +1,22 @@
 
 package com.liferay.social.driver.web.content;
 
-import java.math.BigInteger;
-import java.util.Calendar;
-
+import com.liferay.asset.kernel.exception.DuplicateTagException;
+import com.liferay.message.boards.kernel.model.MBDiscussion;
 import com.liferay.portal.kernel.security.SecureRandom;
+import com.liferay.portal.kernel.security.auth.PrincipalThreadLocal;
+import com.liferay.portal.kernel.service.ServiceContext;
+import com.liferay.portal.kernel.service.UserLocalServiceUtil;
 import com.liferay.portal.kernel.workflow.WorkflowConstants;
-import com.liferay.portal.security.auth.PrincipalThreadLocal;
-import com.liferay.portal.service.ServiceContext;
-import com.liferay.portal.service.UserLocalServiceUtil;
-import com.liferay.portlet.asset.DuplicateTagException;
-import com.liferay.portlet.messageboards.model.MBDiscussion;
-import com.liferay.portlet.ratings.service.RatingsEntryServiceUtil;
+import com.liferay.ratings.kernel.service.RatingsEntryServiceUtil;
 import com.liferay.social.driver.web.portlet.action.SocialDriverResourceCommand;
 import com.liferay.wiki.exception.DuplicatePageException;
 import com.liferay.wiki.exception.PageTitleException;
 import com.liferay.wiki.model.WikiNode;
 import com.liferay.wiki.model.WikiPage;
+
+import java.math.BigInteger;
+import java.util.Calendar;
 
 public class WikiManager {
 
